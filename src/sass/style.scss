@@ -154,14 +154,12 @@ hr {
 
 blockquote {
     margin: 0 0 2em;
-    padding: 1em;
+    padding: 0 1em;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border-left: 0.25em solid $color-gray-90;
-    font-style: italic;
     font-weight: 300;
     color: $color-blue-30;
-    background: $color-gray-98;
 }
 blockquote p {
 	margin: 0 0 1em;
