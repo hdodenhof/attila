@@ -34,7 +34,8 @@ html.menu-active,
 }
 
 body {
-	font: 400 2em / 1.5em 'Cardo', serif;
+	font: 300 2em / 1.6em Georgia, serif;
+	letter-spacing: .02em;
 	color: $color-blue-30;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -52,7 +53,7 @@ textarea {
 a {
 	color: $color-blue-15;
 	text-decoration: none;
-	font-weight: 400;
+	font-weight: 300;
 	transition: all ease-out 0.2s;
 }
 a:hover,
@@ -158,7 +159,7 @@ blockquote {
     box-sizing: border-box;
     border-left: 0.25em solid $color-gray-90;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 300;
     color: $color-blue-30;
     background: $color-gray-98;
 }
