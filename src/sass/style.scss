@@ -41,6 +41,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
+  background: $color-white;
 }
 input,
 button,
@@ -83,7 +84,7 @@ h2 {
 
 h3 {
 	font-size: 1.5em;
-	line-height: 1.334em;
+	line-height: 1.33333em;
 	margin: 1em 0 1em;
 }
 
@@ -196,7 +197,7 @@ dl dt {
   	line-height: 1.25em;
     font-weight: 700;
     color: $color-black;
-    margin-bottom: 0.334em;
+    margin-bottom: 0.33333em;
 }
 dl dt:before {
     content: '';
@@ -217,8 +218,8 @@ mark {
 }
 code, tt {
 	position: relative;
-	margin: 0 0.334em;
-	padding: 0.334em 0.667em;
+	margin: 0 0.33333em;
+	padding: 0.33333em 0.66666em;
 	font-family: monospace, sans-serif;
 	font-size: 0.75em;
 	white-space: pre;
@@ -240,11 +241,11 @@ pre {
 }
 pre .lines {
 	position: absolute;
-	width: 2.667em;
+	width: 2.66666em;
 	height: 100%;
 	left: 0;
 	top: 0;
-	padding: 1.334em 0;
+	padding: 1.33333em 0;
 	border-right: 1px solid $color-gray-90;
 	font-size: 0.75em;
 	line-height: 2em;
@@ -254,7 +255,7 @@ pre .lines {
 }
 pre .lines .line {
 	display: block;
-	padding-right: 0.334em;
+	padding-right: 0.33333em;
     color: $color-blue-30;
 }
 
@@ -262,8 +263,8 @@ pre code, pre tt {
   display: block;
 	position: static;
 	top: auto;
-	margin: -1.334em -1.334em -1.334em 1.334em;
-	padding: 1.334em;
+	margin: -1.33333em -1.33333em -1.33333em 1.33333em;
+	padding: 1.33333em;
   overflow-x: auto;
 	font-size: 0.75em;
 	line-height: 2em;
@@ -275,7 +276,7 @@ pre code, pre tt {
 pre code.language-text {
   overflow: hidden;
   white-space: normal;
-  margin-left: -1.334em;
+  margin-left: -1.33333em;
 }
 
 kbd {
@@ -313,7 +314,7 @@ table th {
 	font-weight: 500;
 	font-size: 0.75em;
 	line-height: 1.25em;
-	padding: 0.667em;
+	padding: 0.66666em;
 	color: $color-black;
 }
 table td:after {
@@ -334,12 +335,6 @@ img {
 	max-width: 100%;
 	height: auto;
 	margin: 0 0 2em;
-}
-
-img[src$="#full"] {
-  max-width: none;
-  width: 100vw;
-  margin: 3em 0;
 }
 
 .kg-image-card {
@@ -370,11 +365,11 @@ img[src$="#full"] {
     margin: auto;
   	font-size: 0.75em;
   	line-height: 1.25em;
-  	padding: 0.667em 0;
+  	padding: 0.66666em 0;
   }
 
   .kg-image-full + figcaption {
-    margin-bottom: 1.334em;
+    margin-bottom: 1.33333em;
   }
 }
 
@@ -392,7 +387,7 @@ img[src$="#full"] {
     margin: auto;
   	font-size: 0.75em;
   	line-height: 1.25em;
-  	padding: 0.667em 0;
+  	padding: 0.66666em 0;
   }
 }
 
@@ -431,6 +426,15 @@ img[src$="#full"] {
   }
 }
 
+.kg-code-card {
+  min-width: 100%;
+  margin: 0 0 2em;
+}
+
+.kg-code-card pre {
+  margin: 0;
+}
+
 .fluid-width-video-wrapper {
 	margin: 0 0 2em;
 }
@@ -454,7 +458,7 @@ img[src$="#full"] {
 .avatar {
 	position: relative;
 	overflow: hidden;
-	background: $color-gray-95;
+	background: $color-gray-90;
 	margin: 0;
 
 	&:before,
@@ -464,16 +468,17 @@ img[src$="#full"] {
 		z-index: 1;
 		width: 50%;
 		height: 50%;
-		bottom: 35%;
+		bottom: 32.5%;
 		left: 25%;
 		border-radius: 100%;
-		background: $color-gray-90;
+		background: $color-gray-95;
+    box-sizing: border-box;
 	}
 
 	&:after {
-		width: 100%;
+		width: 80%;
 		bottom: -25%;
-		left: 0;
+		left: 10%;
 	}
 
 	img {
@@ -530,6 +535,18 @@ img[src$="#full"] {
 	z-index: 5;
 	background: no-repeat scroll center center / cover $color-black;
 	animation: 0.5s ease-in forwards fadein;
+  display: flex;
+  align-items: center;
+
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 6;
+    object-fit: cover;
+  }
 }
 .blog-cover:after {
 	position: absolute;
@@ -627,18 +644,17 @@ img[src$="#full"] {
 }
 .nav-button a {
 	display: block;
-	height: 1.5em;
 	margin-bottom: 1em;
 	padding: 0.5em 1.25em;
 	border: 1px solid $color-blue-80;
 	font-family: 'Fira Sans', sans-serif;
 	font-size: 0.75em;
-	line-height: 1.667em;
+	line-height: 1.66666em;
 	text-shadow: none;
 	color: $color-blue-60;
 	cursor: pointer;
 	background: $color-white;
-	transition: color,border-color ease 0.3s;
+	transition: all ease 0.3s;
 	border-radius: 2em;
 }
 .nav-button a:hover,
@@ -657,8 +673,13 @@ img[src$="#full"] {
 	border-color: $color-white;
 }
 .nav-button a i {
-	display: inline-block;
-	color: inherit;
+  display: inline-block;
+  color: inherit;
+  margin-right: 2px;
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  position: relative;
+  bottom: -2px;
 }
 .nav-button a i:before {
 	position: relative;
@@ -684,6 +705,7 @@ img[src$="#full"] {
 	box-shadow: inset -2px 0 7px rgba(0,0,0,0.1);
 	transform: translate3d(16em,0,0);
 	transition: all ease-out 0.25s;
+  box-sizing: border-box;
 }
 .menu-active #menu {
 	transform: translate3d(0,0,0);
@@ -712,9 +734,10 @@ img[src$="#full"] {
 #menu .close-button:before {
 	position: absolute;
 	width: 1em;
-	height: 1px;
+	height: 1.5px;
 	left: 50%;
 	top: 50%;
+  margin-top: -0.5px;
 	margin-left: -0.5em;
 	content: '';
 	background: $color-blue-60;
@@ -742,11 +765,12 @@ img[src$="#full"] {
 }
 #menu .nav-label {
 	display: block;
-	padding: 1.667em 2em;
+	padding: 1.66666em 2em;
 	margin: 0;
 	opacity: 0.5;
 	font-size: 0.75em;
 	line-height: 2em;
+  font-weight: 500;
 }
 #menu ul {
 	position: relative;
@@ -886,26 +910,23 @@ img[src$="#full"] {
 	border: 0;
 }
 #blog-author.has-cover .post-author-avatar {
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	box-shadow: 0 0 0 2px $color-white;
 	margin-top: 0.5em;
 }
-#blog-author.has-cover .post-author-avatar img {
-	border: 0.125em solid $color-white;
-}
 #blog-author .post-author-name {
-	padding: 0.334em 0 0;
+	padding: 0.33333em 0 0;
 	font-size: 2em;
 	line-height: 1em;
 }
 #blog-author.has-cover .post-author-name {
-	padding: 0.667em 0;
+	padding: 0.66666em 0;
 	font-weight: 500;
 	letter-spacing: 0.025em;
-	line-height: 1.334em;
+	line-height: 1.33333em;
 	color: $color-white;
 }
 #blog-author.has-cover .post-author-about {
-	margin-top: -0.667em;
+	margin-top: -0.66666em;
 }
 
 
@@ -982,6 +1003,18 @@ img[src$="#full"] {
 	z-index: 5;
 	background: no-repeat scroll center center / cover $color-black;
 	animation: 0.5s ease-in forwards fadein;
+  display: flex;
+  align-items: center;
+
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 6;
+    object-fit: cover;
+  }
 }
 .post-cover:after {
 	position: absolute;
@@ -1020,11 +1053,11 @@ img[src$="#full"] {
 	position: relative;
 	z-index: 10;
 	display: block;
-	margin-bottom: 1.334em;
+	margin-bottom: 1.33333em;
 	font-family: 'Fira Sans', sans-serif;
 	font-size: 0.75em;
 	font-weight: 400;
-	line-height: 1.334em;
+	line-height: 1.33333em;
   color: $color-blue-60;
 }
 .has-cover .post-meta {
@@ -1079,33 +1112,43 @@ img[src$="#full"] {
    ========================================================================== */
 
 .post-info {
+  font-family: 'Fira Sans', sans-serif;
 	margin-top: 2em;
-	overflow: hidden;
+}
+.post-info-label {
+  margin-right: 0.75em;
+  font-size: 0.8em;
+  line-height: 2.5em;
+  font-weight: 400;
+  color: $color-blue-60;
 }
 .post-tags {
+  position: relative;
 	max-width: 75%;
 	float: left;
-	font-family: 'Fira Sans', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
 }
 .post-tags a {
 	display: inline-block;
-	margin: 0 0.334em 0.667em 0;
-	padding: 0.575em 1em;
-	background: $color-white;
-	border: 1px solid $primary-color;
-	font-size: 0.75em;
+	margin-right: 0.5em;
+  margin-bottom: 0.5em;
+	padding: 0 1em;
+	background: $primary-color;
+	font-size: 0.8em;
 	font-weight: 500;
-	line-height: 1.334em;
+	line-height: 2.5em;
 	text-align: center;
 	text-decoration: none;
-	color: $primary-color;
+	color: $color-white;
 	border-radius: 2em;
 	transition: all ease 0.3s;
 	box-sizing: border-box;
+  white-space: nowrap;
 }
 .post-tags a:hover,
 .post-tags a:focus {
-	background: $primary-color;
+	background: $color-blue-15;
 	color: $color-white;
 }
 
@@ -1148,7 +1191,7 @@ img[src$="#full"] {
 .post-author-bio {
 	padding-left: 10em;
   font-size: 0.75em;
-  line-height: 1.334em;
+  line-height: 1.66666em;
 
   @media only screen and (max-width: 480px) {
     padding-left: 0;
@@ -1157,12 +1200,12 @@ img[src$="#full"] {
 .post-author-name {
 	margin: 0;
 	padding: 0;
-  font-size: 1.334em;
+  font-size: 1.33333em;
   line-height: 1em;
   text-indent: inherit;
 }
 .post-author-about {
-	margin: 0.667em 0 0.334em;
+	margin: 0.66666em 0 0;
 }
 .post-author-bio span {
 	position: relative;
@@ -1203,9 +1246,9 @@ img[src$="#full"] {
   font-family: 'Fira Sans', sans-serif;
 }
 .post-authors-info {
-  margin: 0 0 0.334em;
+  margin: 0 0 0.33333em;
   font-size: 0.75em;
-  line-height: 1.334em;
+  line-height: 1.33333em;
 }
 .post-authors-authors {
   margin: 0;
@@ -1237,7 +1280,7 @@ img[src$="#full"] {
 	border: 1px solid $color-blue-80;
 	font-family: 'Fira Sans', sans-serif;
 	font-size: 0.75em;
-	line-height: 1.334em;
+	line-height: 1.33333em;
 	color: $color-blue-60;
 	text-align: center;
 	cursor: pointer;
@@ -1260,14 +1303,18 @@ img[src$="#full"] {
 .post-subscribe {
 	position: relative;
 	padding: 2em 0;
+  margin: 1em 0;
 	text-align: center;
-	border-bottom: 1px solid $color-gray-90;
+	background: $color-blue-30;
+  color: $color-blue-80;
 	box-sizing: border-box;
+  border-radius: 2px;
 
 	p {
-		margin: 1.25em 0 0;
-		font-size: 0.8em;
-		line-height: 1.25em;
+    max-width: 13.33333em;
+		margin: 0 auto 1.33333em;
+		font-size: 1.2em;
+		line-height: 1.33333em;
 	}
 
 	.post-subscribe-form {
@@ -1278,38 +1325,36 @@ img[src$="#full"] {
 			width: 100%;
 			font-size: 0.8em;
 			height: 2.5em;
-			padding: 0.25em 1em;
-			border: 1px solid $color-blue-80;
+			padding: 0 0.25em 0 1.25em;
+			border: 0;
 			border-right: none;
 			appearance: none;
 			outline: none;
 			box-shadow: none;
 			box-sizing: border-box;
 			border-radius: 4em 0 0 4em;
-
-			&:hover {
-				border-color: $color-blue-60;
-			}
-
-			&:focus {
-				border-color: $color-red-95;
-			}
+      color: $color-blue-30;
 		}
 
 		.post-subscribe-button {
 			display: inline-block;
 			font-size: 0.8em;
 			height: 2.5em;
-			padding: 0 1em;
+			padding: 0 1.25em 0 1em;
 			font-weight: 500;
 			color: $color-white;
-			background: $color-red-95;
+			background: $color-blue-60;
 			border: 0;
 			appearance: none;
 			outline: none;
 			box-shadow: none;
 			box-sizing: border-box;
 			border-radius: 0 4em 4em 0;
+
+      &:hover,
+      &:focus {
+				background: $primary-color;
+			}
 		}
 	}
 }
@@ -1320,6 +1365,8 @@ img[src$="#full"] {
 
 .post-nav {
 	position: relative;
+  margin-top: -1px;
+  border-top: 1px solid $color-gray-90;
 	border-bottom: 1px solid $color-gray-90;
 }
 .post-nav:after {
@@ -1387,7 +1434,7 @@ img[src$="#full"] {
 .post-nav-excerpt {
 	margin: 0;
 	font-size: 0.75em;
-	line-height: 1.334em;
+	line-height: 1.33333em;
 }
 
 /* ==========================================================================
@@ -1415,9 +1462,9 @@ img[src$="#full"] {
 .pagination a {
 	position: relative;
 	display: block;
-	height: 1.334em;
+	height: 1.33333em;
 	margin: -1px 0;
-	padding: 0.667em 1em;
+	padding: 0.66666em 1em;
 	z-index: 100;
 	border: 1px solid $color-blue-80;
 	font-size: 0.75em;
@@ -1430,11 +1477,11 @@ img[src$="#full"] {
 }
 .pagination .pagination-prev {
 	float: right;
-	padding-left: 1.334em;
+	padding-left: 1.33333em;
 }
 .pagination .pagination-next {
 	float: left;
-	padding-right: 1.334em;
+	padding-right: 1.33333em;
 }
 .pagination a:hover,
 .pagination a:focus {
@@ -1443,28 +1490,34 @@ img[src$="#full"] {
 }
 .pagination .pagination-label {
 	position: relative;
-	top: -0.167em;
+	top: -1px;
 	display: inline-block;
-	height: 1.334em;
-	line-height: 1.334em;
+	height: 1.33333em;
+	line-height: 1.33333em;
 }
 .pagination a i {
 	position: relative;
+  top: 1px;
 	width: auto;
-	margin: auto;
+	margin: auto 4px;
 	color: inherit;
-	font-size: 1.334em;
+	font-size: 1.33333em;
 	line-height: 0.75em;
+}
+.pagination a i:before {
+  position: relative;
+  width: auto;
+  margin: auto;
 }
 .pagination .pagination-info {
 	position: absolute;
 	width: 100%;
-	height: 2.667em;
+	height: 2.66666em;
 	left: 0;
 	z-index: 50;
 	display: block;
 	font-size: 0.75em;
-	line-height: 2.667em;
+	line-height: 2.66666em;
 	text-align: center;
 }
 
