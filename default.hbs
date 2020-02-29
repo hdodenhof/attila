@@ -18,7 +18,9 @@
 
 	<div class="nav-header">
 		<nav class="nav-wrapper">
-				{{navigation}}
+				{{^is "home"}}
+					{{navigation}}
+				{{/is}}
 				<ul class="nav-side">
 					{{#if @site.twitter}}
 					<li class="nav-twitter"><a title="Twitter" href="{{twitter_url}}" title="{{@site.twitter}}" target="_blank"><i class="icon icon-twitter"></i><span>Twitter</span></a></li>
