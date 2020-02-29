@@ -1107,9 +1107,6 @@ textarea {
 	width: 100%;
 	z-index: 400;
 	transition: all ease-out 0.3s;
-	@media only screen and (max-width: $breakpoint-medium) {
-		transform: translate3d(0,-100%,0);
-	}
 }
 
 .menu-active .nav-header {
@@ -1131,12 +1128,6 @@ textarea {
 	}
 }
 
-.menu-active .nav-close {
-	@media only screen and (max-width: $breakpoint-medium) {
-		display: block;
-	}
-}
-
 .nav-header .nav-wrapper-control {
 	position: absolute;
 	z-index: 500;
@@ -1151,9 +1142,6 @@ textarea {
 	transition: all linear 0.1s;
 	@media (prefers-color-scheme: dark) {
 		color: $color-text-secondary-dark;
-	}
-	@media only screen and (max-width: $breakpoint-medium) {
-		display: block;
 	}
 
 	.inner {
@@ -1221,14 +1209,6 @@ textarea {
 	max-height: calc(100vh - 6rem);
 	padding: 2rem 4rem;
 	overflow-y: auto;
-	@media only screen and (max-width: $breakpoint-medium) {
-		background: $color-neutral-15;
-		flex-direction: column;
-		@supports (-webkit-backdrop-filter: blur(2rem)) {
-			background: rgba(34,36,38,0.9);
-			-webkit-backdrop-filter: blur(2rem);
-		}
-	}
 }
 
 .nav-header ul {
@@ -1238,17 +1218,9 @@ textarea {
 	margin: auto;
 	padding: 0;
 	list-style: none;
-	@media only screen and (max-width: $breakpoint-medium) {
-		flex-direction: column;
-		flex-shrink: 0;
-		padding: 2rem 0;
-	}
 
 	&:last-child {
 		justify-content: flex-end;
-		@media only screen and (max-width: $breakpoint-medium) {
-			display: none;
-		}
 	}
 }
 
@@ -1268,16 +1240,6 @@ textarea {
 			margin-left: -1rem;
 			margin-top: -2rem;
 			background: $color-primary;
-			@media only screen and (max-width: $breakpoint-medium) {
-				left: 0;
-				top: 50%;
-				width: 1.5rem;
-				height: 2px;
-				margin-left: 6px;
-				margin-top: -1px;
-				border-radius: 2px;
-				padding: 0;
-			}
 		}
 
 		a {
@@ -1285,9 +1247,6 @@ textarea {
 			font-weight: 500;
 			@media (prefers-color-scheme: dark) {
 				color: $color-neutral-90;
-			}
-			@media only screen and (max-width: $breakpoint-medium) {
-				color: #FFF;
 			}
 		}
 	}
@@ -1304,32 +1263,12 @@ textarea {
 		font-weight: 400;
 		cursor: pointer;
 		transition: color linear 0.1s;
-		@media only screen and (max-width: $breakpoint-medium) {
-			font-size: 2em;
-			padding-left: 4rem;
-
-			&:before {
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 50%;
-				width: 1.5rem;
-				height: 2px;
-				margin-left: 6px;
-				margin-top: -1px;
-				border-radius: 2px;
-				background: $color-neutral-25;
-			}
-		}
 
 		&:focus,
 		&:hover {
 			color: $color-neutral-25;
 			@media (prefers-color-scheme: dark) {
 				color: $color-neutral-90;
-			}
-			@media only screen and (max-width: $breakpoint-medium) {
-				color: $color-neutral-80;
 			}
 		}
 	}
@@ -1367,22 +1306,16 @@ textarea {
 
 	.nav-header li {
 		a {
-			@media only screen and (min-width: $breakpoint-medium) {
-				color: rgba(255,255,255,0.8);
-			}
+			color: rgba(255,255,255,0.8);
 
 			&:focus,
 			&:hover {
-				@media only screen and (min-width: $breakpoint-medium) {
-					color: #FFF;
-				}
+				color: #FFF;
 			}
 		}
 
 		&.active a {
-			@media only screen and (min-width: $breakpoint-medium) {
-				color: #FFF;
-			}
+			color: #FFF;
 		}
 	}
 }
