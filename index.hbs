@@ -1,19 +1,17 @@
 {{!< default}}
-<header id="blog-header"{{#if @site.cover_image}} class="has-cover"{{/if}}>
+<header class="blog-header {{#if @site.cover_image}} has-cover{{/if}}">
 	<div class="inner">
-		<nav id="navigation">
-			{{#if @site.navigation}}
-			<span id="menu-button" class="nav-button">
-				<a class="menu-button"><i class="ic ic-menu"></i> {{t "Menu"}}</a>
-			</span>
+		<div class="box blog-box">
+			{{#if @site.logo}}
+			<img class="blog-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
+			{{else}}
+			<h1 class="blog-name">{{@site.title}}</h1>
 			{{/if}}
-		</nav>
-		{{#if @site.logo}}
-		<img class="blog-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
-		{{else}}
-		<h1 class="blog-name">{{@site.title}}</h1>
-		{{/if}}
-		{{#if @site.cover_image}}
+			{{#if @site.description}}
+			<span class="blog-description">{{@site.description}}</span>
+			{{/if}}
+			{{#if @site.cover_image}}
+		</div>
 		<div class="blog-cover cover">
 			<img
 			srcset="{{img_url @site.cover_image size="s"}} 320w,

@@ -6,15 +6,16 @@
 
 <article class="{{post_class}}">
 	<div class="inner">
-		<header class="post-header">
+		<div class="box post-box">
 			<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-			<span class="post-meta">{{authors separator=", "}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
-			<div class="clear"></div>
-		</header>
-
-		<section class="post-excerpt">
-			<p>{{excerpt}}</p>
-		</section>
+			<span class="post-meta">
+				{{t "By"}}
+				{{authors separator=", "}}
+				{{t "on "}}
+				<time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time>
+			</span>
+			<p class="post-excerpt">{{excerpt}}</p>
+		</div>
 	</div>
 </article>
 
