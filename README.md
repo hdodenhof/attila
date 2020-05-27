@@ -39,6 +39,10 @@ If you like this theme and want to support future development you can become a [
 * __Romanian__ by [cdorin93](https://github.com/cdorin93)
 * __Russian__ by [schamberg97](https://github.com/schamberg97)
 * __Turkish__ by [cgrgrbz](https://github.com/cgrgrbz)
+* __Swedish__ by [martenj77](https://github.com/martenj77)
+* __Czech__ by [lunakv](https://github.com/lunakv)
+* __Portuguese__ by [matheusvanzan](https://github.com/matheusvanzan)
+* __Vietnamese__ by [JustHmmmm](https://github.com/justhmmmm)
 
 ## Setup [Disqus](https://disqus.com/)
 
